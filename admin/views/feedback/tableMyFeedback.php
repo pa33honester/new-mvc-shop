@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="header">
-                <h2>Truy Xuất Dữ Liệu <strong>"Your Feedback"</strong> </h2>
+                <h2>Data access<strong>"Your Feedback"</strong> </h2>
                 <ul class="header-dropdown">
                     <li class="remove">
                         <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>

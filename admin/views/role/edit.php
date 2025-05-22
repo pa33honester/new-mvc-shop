@@ -10,11 +10,11 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Thông tin Roles</h2>
+                    <h2>User Role Information</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> Nails By Leslie </a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=order">Role</a></li>
-                        <li class="breadcrumb-item active">Chỉnh sửa quyền truy cập</li>
+                        <li class="breadcrumb-item active">Edit access rights</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
@@ -26,11 +26,11 @@
         <div class="container-fluid">
             <!-- Basic Examples -->
             <div class="row clearfix">
-                <h2 style="font-weight: bold;">Chỉnh sửa mô tả quyền truy cập (Role)</h2>
+                <h2 style="font-weight: bold;">Edit access description (Role)</h2>
                 <div class="col-lg-12">
                     <form id="product-form" class="form-horizontal" method="post" action="admin.php?controller=role&amp;action=edit" enctype="multipart/form-data" role="form">
                         <input name="role_id" type="hidden" value="<?= $role ? $role['id'] : '0'; ?>" />
-                        <h4 class="card-inside-title" style="font-weight:bold;">Tên Role</h4>
+                        <h4 class="card-inside-title" style="font-weight:bold;">Role's name</h4>
                         <div class="row clearfix">
                             <div class="col-sm-12">
                                 <div class="form-group">
@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h4 class="card-inside-title" style="font-weight:bold;">Phần mô tả cho Role trên:</h4>
+                        <h4 class="card-inside-title" style="font-weight:bold;">The description for the role above:</h4>
                         <div class="row clearfix">
                             <div class="col-sm-12">
                                 <div class="form-group">
@@ -48,8 +48,8 @@
                         </div>
                         <br><br>
                         <div class="form-group" style="text-align: center;">
-                            <button class="btn btn-primary waves-effect" type="submit">Update lại thông tin Role</button>
-                            <a class="btn btn-warning waves-effect" href="admin.php?controller=role">Trở về</a>
+                            <button class="btn btn-primary waves-effect" type="submit">Update Role information</button>
+                            <a class="btn btn-warning waves-effect" href="admin.php?controller=role">Return</a>
                         </div>
                     </form>
                 </div>

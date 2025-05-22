@@ -19,7 +19,7 @@ require_once('admin/models/users.php');
 if (!empty($_POST)) {
     user_update();
 }
-$title = ($userId == 0) ? 'Thêm thông tin' : 'Cập nhật thông tin tài khoản';
+$title = ($userId == 0) ? 'Add information' : 'Update account information';
 $nav_user = 'class="active open"';
 $user_info = getRecord('users', $userId);
 require('admin/views/user/edit.php');

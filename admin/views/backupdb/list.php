@@ -12,7 +12,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>User</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> Home </a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=backupdb">BackUp</a></li>
                         <li class="breadcrumb-item active">Backup database</li>
                     </ul>
@@ -47,15 +47,15 @@
                                     <thead>
                                         <tr>
                                             <th>STT</th>
-                                            <th>Tên file CSDL đã backup</th>
-                                            <th>Hành động</th>
+                                            <th>The name of the database file has been backup</th>
+                                            <th>Act</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>STT</th>
-                                            <th>Tên file CSDL đã backup</th>
-                                            <th>Hành động</th>
+                                            <th>The name of the database file has been backup</th>
+                                            <th>Act</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -72,7 +72,7 @@ foreach (new DirectoryIterator('admin/database') as $filename) :
                                                 <td>
                                                     <form action="admin.php?controller=backupdb&action=delete" method="post">
                                                         <input type="hidden" name="linkFile" value="<?= $link_connect_file ?>">
-                                                        <button onclick="return confirm('Are you sure to delete?')" title="Delete file" class="btn btn-danger btn-round" type="submit"> <i class="zmdi zmdi-delete"></i> Xóe</button>
+                                                        <button onclick="return confirm('Are you sure to delete?')" title="Delete file" class="btn btn-danger btn-round" type="submit"> <i class="zmdi zmdi-delete"></i> Ribs</button>
                                                     </form>
                                                 </td>
                                             </tr>

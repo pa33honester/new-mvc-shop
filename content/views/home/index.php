@@ -36,11 +36,10 @@ require 'newproduct.php'; ?>
                                 <li><a href="javascript:void(0);"><img class="img-responsive" src="public/img/bang-hieu-chikoishop-1.jpg" /></a></li>
                             </ul>
                         </div>
-                        <strong class="our-work">ChiKoiQuan</strong>
+                        <strong class="our-work">Nails By Leslie</strong>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <?php

@@ -6,7 +6,7 @@ require_once('admin/models/users.php');
 $options = [
     'order_by' => 'id ASC',
 ];
-$title = 'Danh sách Thành viên';
+$title = 'List of members';
 $nav_user = 'class="active open"';
 $list_user = getAll('users', $options);
 require('admin/views/user/listall.php');

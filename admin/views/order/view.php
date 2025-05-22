@@ -10,16 +10,19 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Thông tin đơn hàng</h2>
+                    <h2>Order information</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
-                        <li class="breadcrumb-item"><a href="admin.php?controller=order">Đơn hàng</a></li>
-                        <li class="breadcrumb-item active">Chi tiết đơn hàng</li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i>
+                                Nails By Leslie </a></li>
+                        <li class="breadcrumb-item"><a href="admin.php?controller=order">Order</a></li>
+                        <li class="breadcrumb-item active">Order details</li>
                     </ul>
-                    <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
+                    <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                            class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
-                    <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i class="zmdi zmdi-arrow-right"></i></button>
+                    <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i
+                            class="zmdi zmdi-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -29,9 +32,11 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2><strong>Truy Xuất Dữ Liệu</strong> "Tất cả các sản phẩm trong đơn hàng" </h2>
+                            <h2><strong>Data access</strong> "All products in the order" </h2>
                             <ul class="header-dropdown">
-                                <li class="dropdown"> <a href="javascript:vorder_id(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                <li class="dropdown"> <a href="javascript:vorder_id(0);" class="dropdown-toggle"
+                                        data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="zmdi zmdi-more"></i> </a>
                                     <ul class="dropdown-menu dropdown-menu-right slideUp">
                                         <li><a href="javascript:vorder_id(0);">Action</a></li>
                                         <li><a href="javascript:vorder_id(0);">Another action</a></li>
@@ -45,27 +50,28 @@
                         </div>
                         <div class="body">
                             <div class="table-responsive">
-                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                <table
+                                    class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                     <thead>
                                         <tr>
                                             <th>STT</th>
-                                            <th>Tên sản phẩm</th>
-                                            <th>Ảnh đại diện</th>
-                                            <th>Giá gốc</th>
-                                            <th>Giá khuyến mãi</th>
-                                            <th>Số lượng</th>
-                                            <th>Giá Tổng SL</th>
+                                            <th>Product name</th>
+                                            <th>Avatar</th>
+                                            <th>Original price</th>
+                                            <th>Promotional price</th>
+                                            <th>Quantity</th>
+                                            <th>Total price SL</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>STT</th>
-                                            <th>Tên sản phẩm</th>
-                                            <th>Ảnh đại diện</th>
-                                            <th>Giá gốc</th>
-                                            <th>Giá khuyến mãi</th>
-                                            <th>Số lượng</th>
-                                            <th>Giá Tổng SL</th>
+                                            <th>Product name</th>
+                                            <th>Avatar</th>
+                                            <th>Original price</th>
+                                            <th>Promotional price</th>
+                                            <th>Quantity</th>
+                                            <th>Total price SL</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -80,80 +86,87 @@ foreach ($orderDetail as $product) :
         $order_total += $product['product_price'] * $product['quantity'];
     }
     ?>
-                                            <tr>
-                                                <td><?= $stt; ?></td>
-                                                <td><a href="product/<?= $product['id']; ?>-<?=$product['slug']?>"><?= number_format($product['product_price'], 0, ',', '.') ?>đ</a></td>
-                                                <td><?php if (is_file("public/upload/products/" . $product['img1'])) {
+                                        <tr>
+                                            <td><?= $stt; ?></td>
+                                            <td><a
+                                                    href="product/<?= $product['id']; ?>-<?=$product['slug']?>"><?= number_format($product['product_price'], 0, ',', '.') ?>đ</a>
+                                            </td>
+                                            <td><?php if (is_file("public/upload/products/" . $product['img1'])) {
                                                     echo '<image src="public/upload/products/' . $product['img1'] . '?time=' . time() . '" style="max-width:50px;" />';
                                                 } ?></td>
-                                                <td><?= number_format($product['product_price'], 0, ',', '.') ?></td>
-                                                <td><?php if ($product['saleoff'] == 1) {
+                                            <td><?= number_format($product['product_price'], 0, ',', '.') ?></td>
+                                            <td><?php if ($product['saleoff'] == 1) {
                                                     echo($product['product_price'] - (($product['product_price']) * ($product['percentoff']) / 100));
                                                 } ?></td>
-                                                <td><?= $product['quantity'] ?></td>
-                                                <td><?php if ($product["product_typeid"] == 3) {
+                                            <td><?= $product['quantity'] ?></td>
+                                            <td><?php if ($product["product_typeid"] == 3) {
                                                     echo number_format((($product['product_price'] - (($product['product_price']) * ($product['percentoff']) / 100)) * $product['quantity']), 0, ',', '.');
                                                 } else {
                                                     echo number_format($product['product_price'] * $product['quantity'], 0, ',', '.');
                                                 } ?></td>
-                                            </tr>
+                                        </tr>
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
-                                <h3 style="font-weight: bold;text-align: center;">Thành tổng tiền : <?= number_format($order_total, 0, ',', '.'); ?> VNĐ</h3>
-                                <h3 style="font-weight: bold; color: red; text-align: center;"><b> <?=$status[$order['status']]?></b></h3>
+                                <h3 style="font-weight: bold;text-align: center;">Thành tổng tiền :
+                                    <?= number_format($order_total, 0, ',', '.'); ?> VNĐ</h3>
+                                <h3 style="font-weight: bold; color: red; text-align: center;"><b>
+                                        <?=$status[$order['status']]?></b></h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <h3>Thông tin khách hàng</h3>
+                        <h3>Customer information</h3>
                         <table id="info" class="table">
                             <tr>
-                                <td><strong>Họ và tên</strong></td>
+                                <td><strong>Full name</strong></td>
                                 <td><?= $order['customer']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Tỉnh/ Thành phố</strong> </td>
+                                <td><strong>Province/city</strong> </td>
                                 <td><?= $order['province']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Địa chỉ</strong> </td>
+                                <td><strong>Address</strong> </td>
                                 <td><?= $order['address']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Di động</strong> </td>
+                                <td><strong>Mobile</strong> </td>
                                 <td><?= $order['phone']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Thời gian</strong> </td>
+                                <td><strong>Time</strong> </td>
                                 <td><?= $order['createtime']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Tin nhắn từ khách hàng</strong> </td>
+                                <td><strong>Message from customers</strong> </td>
                                 <td><?= $order['message']; ?></td>
                             </tr>
                         </table>
                         <?php if ($order['status'] == 0) { ?>
-                            <form id="order_form" method="post" action="admin.php?controller=order&amp;action=inprocess" role="form">
-                                <div style="text-align: center;" class="form-group">
-                                    <input name="order_id" type="hidden" value="<?= $order['id']; ?>" />
-                                    <button class="btn btn-primary waves-effect" type="submit">Tiến hành xử lý đơn hàng</button>
-                                    <a href="admin.php?controller=order" class="btn btn-warning waves-effect">Quay lại</a>
-                                </div>
-                            </form>
-                        <?php } elseif ($order['status'] == 2) { ?>
-                            <form id="order_form" method="post" action="admin.php?controller=order&amp;action=complete" role="form">
-                                <div style="text-align: center;" class="form-group">
-                                    <input name="order_id" type="hidden" value="<?= $order['id']; ?>" />
-                                    <button class="btn btn-primary waves-effect" type="submit">Xác nhận đã xử lý thành công đơn hàng này</button>
-                                    <a href="admin.php?controller=order" class="btn btn-warning waves-effect">Quay lại</a>
-                                </div>
-                            </form>
-                        <?php } else { ?>
-                            <div style="text-align: center;">
-                                <a onclick="return confirm('Are you sure to delete?')" class="btn btn-primary waves-effect" href="admin.php?controller=order&amp;action=delete&amp;order_id=<?= $order['id'] ?>">Xoá đơn hàng này</a>
-                                <a href="admin.php?controller=order" class="btn btn-warning waves-effect">Quay lại</a>
+                        <form id="order_form" method="post" action="admin.php?controller=order&amp;action=inprocess"
+                            role="form">
+                            <div style="text-align: center;" class="form-group">
+                                <input name="order_id" type="hidden" value="<?= $order['id']; ?>" />
+                                <button class="btn btn-primary waves-effect" type="submit">Processing order</button>
+                                <a href="admin.php?controller=order" class="btn btn-warning waves-effect">Come back</a>
                             </div>
+                        </form>
+                        <?php } elseif ($order['status'] == 2) { ?>
+                        <form id="order_form" method="post" action="admin.php?controller=order&amp;action=complete"
+                            role="form">
+                            <div style="text-align: center;" class="form-group">
+                                <input name="order_id" type="hidden" value="<?= $order['id']; ?>" />
+                                <button class="btn btn-primary waves-effect" type="submit">Confirmation has successfully handled this order</button>
+                                <a href="admin.php?controller=order" class="btn btn-warning waves-effect">Come back</a>
+                            </div>
+                        </form>
+                        <?php } else { ?>
+                        <div style="text-align: center;">
+                            <a onclick="return confirm('Are you sure to delete?')" class="btn btn-primary waves-effect"
+                                href="admin.php?controller=order&amp;action=delete&amp;order_id=<?= $order['id'] ?>">Delete this order</a>
+                            <a href="admin.php?controller=order" class="btn btn-warning waves-effect">Come back</a>
+                        </div>
                         <?php } ?>
                     </div>
                 </div>

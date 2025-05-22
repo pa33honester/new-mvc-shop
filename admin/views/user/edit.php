@@ -10,11 +10,11 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Thông tin tài khoản cá nhân của bạn</h2>
+                    <h2>Your personal account information</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> Nails By Leslie </a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=user&action=listall">User</a></li>
-                        <li class="breadcrumb-item active">Edit Your Profile Info</li>
+                        <li class="breadcrumb-item active">Edit Your Profile</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
@@ -28,22 +28,22 @@
             <div class="row clearfix">
                 <div class="col-lg-12">
                     <div class="card">
-                        <h3>Thông tin tải khoản các nhân</h3>
+                        <h3>Information downloads</h3>
                         <table id="info" class="table">
                             <tr>
-                                <td><strong>Họ và tên</strong></td>
+                                <td><strong>Full name</strong></td>
                                 <td><?= $user_info['user_name']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Tên Đăng nhập</strong> </td>
+                                <td><strong>Username</strong> </td>
                                 <td><?= $user_info['user_username']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Quyền lực</strong> </td>
+                                <td><strong>Power</strong> </td>
                                 <td><strong><?php if ($user_info['role_id'] == 0) {
-                                    echo 'Người đăng ký';
+                                    echo 'Register';
                                 } elseif ($user_info['role_id'] == 1) {
-                                    echo 'Admin - Quản trị viên';
+                                    echo 'Admin -Administrator';
                                 } else {
                                     echo 'Moderator';
                                 } ?></strong></td>
@@ -53,15 +53,15 @@
                                 <td><?= $user_info['user_email']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Địa chỉ</strong> </td>
+                                <td><strong>Address</strong> </td>
                                 <td><?= $user_info['user_address']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Di động</strong> </td>
+                                <td><strong>Mobile</strong> </td>
                                 <td><?= $user_info['user_phone']; ?></td>
                             </tr>
                             <tr>
-                                <td><strong>Ngày đăng ký tài khoản</strong> </td>
+                                <td><strong>Account date</strong> </td>
                                 <td><?= $user_info['createDate']; ?></td>
                             </tr>
                             <tr>
@@ -72,20 +72,20 @@
                     </div>
                 </div>
                 <hr>
-                <h2 style="font-weight: bold;">Phần chỉnh sửa thông tin cá nhân trên</h2>
+                <h2 style="font-weight: bold;">Personal information editing section above</h2>
                 <div class="col-lg-12">
                     <form id="product-form" class="form-horizontal" method="post" action="admin.php?controller=user&action=edit" enctype="multipart/form-data" role="form">
                         <input name="user_id" type="hidden" value="<?= $user_info ? $user_info['id'] : '0'; ?>" />
                         <?php if ($loginUser['role_id'] == 1) : ?>
-                            <h4 class="card-inside-title" style="font-weight:bold;">Tên đăng nhập:</h4>
+                            <h4 class="card-inside-title" style="font-weight:bold;">Username:</h4>
                             <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <input name="username" type="text" maxlength="50" value="<?= $user_info ? $user_info['user_username'] : ''; ?>" class="form-control" id="name" placeholder="VD: tanhongit" required="" />
+                                        <input name="username" type="text" maxlength="50" value="<?= $user_info ? $user_info['user_username'] : ''; ?>" class="form-control" id="name" placeholder="Eg.victoria" required="" />
                                     </div>
                                 </div>
                             </div>
-                            <h2 class="card-inside-title" style="font-weight:bold;">Chọn mức quyền quản trị (Role):</h2>
+                            <h2 class="card-inside-title" style="font-weight:bold;">Select the level of governance (Role):</h2>
                             <div class="row clearfix">
                                 <div class="col-lg-4 col-md-6">
                                     <div class="mb-3 form-group">
@@ -98,14 +98,14 @@
                                 </div>
                             </div>
                         <?php else : ?>
-                            <h4 class="card-inside-title" style="font-weight:bold;">Tên đăng nhập: "<?= $user_info['user_username'] ?>"</h4>
+                            <h4 class="card-inside-title" style="font-weight:bold;">Username:"<?= $user_info['user_username'] ?>"</h4>
                             <input name="username" type="hidden" value="<?= $user_info ? $user_info['user_username'] : ''; ?>" class="form-control" />
                         <?php endif; ?>
-                        <h4 class="card-inside-title" style="font-weight:bold;">Họ và tên User:</h4>
+                        <h4 class="card-inside-title" style="font-weight:bold;">Full name user:</h4>
                         <div class="row clearfix">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <input name="name" type="text" maxlength="250" value="<?= $user_info ? $user_info['user_name'] : ''; ?>" class="form-control" id="name" placeholder="họ và tên thật..." required="" />
+                                    <input name="name" type="text" maxlength="250" value="<?= $user_info ? $user_info['user_name'] : ''; ?>" class="form-control" id="name" placeholder="Full name..." required="" />
                                 </div>
                             </div>
                         </div>
@@ -113,19 +113,19 @@
                         <div class="row clearfix">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <input name="email" type="email" maxlength="250" value="<?= $user_info ? $user_info['user_email'] : ''; ?>" class="form-control" id="color" placeholder="Nhập email của bạn..." required="" />
+                                    <input name="email" type="email" maxlength="250" value="<?= $user_info ? $user_info['user_email'] : ''; ?>" class="form-control" id="color" placeholder="Enter your email..." required="" />
                                 </div>
                             </div>
                         </div>
-                        <h4 class="card-inside-title" style="font-weight:bold;">Nhập địa chỉ:</h4>
+                        <h4 class="card-inside-title" style="font-weight:bold;">Enter the address:</h4>
                         <div class="row clearfix">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <input name="address" type="text" maxlength="250" value="<?= $user_info ? $user_info['user_address'] : ''; ?>" class="form-control" id="material" placeholder="Địa chỉ người dùng ..." required="" />
+                                    <input name="address" type="text" maxlength="250" value="<?= $user_info ? $user_info['user_address'] : ''; ?>" class="form-control" id="material" placeholder="User address ..." required="" />
                                 </div>
                             </div>
                         </div>
-                        <h4 class="card-inside-title" style="font-weight:bold;">Nhập số điện thoại:</h4>
+                        <h4 class="card-inside-title" style="font-weight:bold;">Enter the phone number:</h4>
                         <div class="row clearfix">
                             <div class="col-sm-12">
                                 <div class="form-group">
@@ -133,7 +133,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h4 class="card-inside-title" style="font-weight:bold;">Chọn ảnh Avatar Mới:</h4>
+                        <h4 class="card-inside-title" style="font-weight:bold;">Choose a new avatar photo:</h4>
                         <div class="row clearfix">
                             <div class="col-sm-4">
                                 <input name="imagee" type="file" class="form-control dropify">
@@ -141,9 +141,9 @@
                         </div>
                         <br><br>
                         <div class="form-group" style="text-align: center;">
-                            <button class="btn btn-primary waves-effect" type="submit">Update lại thông tin User</button>
-                            <a class="btn btn-primary waves-effect" href="admin.php?controller=user&action=change-password&amp;user_id=<?= $user_info['id']; ?>">Đổi mật khẩu</a>
-                            <a class="btn btn-warning waves-effect" href="admin.php?controller=user&action=listall">Trở về</a>
+                            <button class="btn btn-primary waves-effect" type="submit">Update user information again</button>
+                            <a class="btn btn-primary waves-effect" href="admin.php?controller=user&action=change-password&amp;user_id=<?= $user_info['id']; ?>">Change password</a>
+                            <a class="btn btn-warning waves-effect" href="admin.php?controller=user&action=listall">Return</a>
                         </div>
                     </form>
                 </div>

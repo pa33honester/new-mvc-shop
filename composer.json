@@ -1,29 +1,26 @@
 {
   "name": "tanhongit/new-mvc-shop",
-  "description": "new-mvc-shop project is a simple project to help you understand the MVC model in PHP",
+  "description": "This is my php-mvc project for SEO nail service",
   "keywords": [
-    "new-mvc-shop",
-    "mvc",
-    "php",
-    "php-mvc",
-    "php-mvc-shop",
-    "php-mvc-shop-project",
-    "mvc-shop"
+    "nail",
+    "nail service",
+    "mexico",
+    "yucatan"
   ],
   "type": "project",
   "homepage": "https://tanhongit.com",
   "authors": [
     {
-      "name": "Tan Nguyen",
-      "email": "tannp27@gmail.com",
-      "homepage": "https://tanhongit.com"
+      "name": "dorian",
+      "email": "pa33honester@gmail.com",
+      "homepage": "https://www.wholesalesInfo.net"
     }
   ],
   "license": "MIT",
   "require": {
     "php": "^8.0",
     "phpmailer/phpmailer": "^v6.9",
-    "vlucas/phpdotenv": "^v5.6",
+    "vlucas/phpdotenv": "^5.6",
     "ext-mysqli": "*"
   },
   "require-dev": {
@@ -31,7 +28,7 @@
     "phpstan/phpstan": "^1.10.39"
   },
   "support": {
-    "issues": "https://github.com/tanhongit/new-mvc-shop/issues"
+    "issues": "https://github.com/pa33honester/nails/issues"
   },
   "scripts": {
     "analyse": "vendor/bin/phpstan",

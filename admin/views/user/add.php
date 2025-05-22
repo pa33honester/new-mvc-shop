@@ -12,9 +12,9 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2><?php ?></h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> Nails By Leslie </a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=user&action=listall">List User</a></li>
-                        <li class="breadcrumb-item active">Thêm người dùng mới</li>
+                        <li class="breadcrumb-item active">Add new users</li>
                     </ul>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
@@ -28,7 +28,7 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="alert alert-warning" role="alert">
-                        <strong>Bạn đang trong trang tạo một người dùng mới, Hãy cẩn trọng!!! <a target="_blank" href="#"> Xem tài liệu hướng dẫn</a>
+                        <strong>You are on the page to create a new user, be careful !!! <a target="_blank" href="#"> View guide documents</a>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                             </button>
@@ -37,27 +37,27 @@
                         <div class="body">
                             <form id="product-form" class="form-horizontal" method="post" action="admin.php?controller=user&action=add" enctype="multipart/form-data" role="form">
                                 <input name="user_id" type="hidden" value="<?= $user_info ? $user_info['id'] : '0'; ?>" />
-                                <h2 class="card-inside-title" style="font-weight:bold;">Tên đăng nhập:</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Username:</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input name="username" type="text" maxlength="50" value="<?= $user_info ? $user_info['user_username'] : ''; ?>" class="form-control" id="name" placeholder="VD: tanhongit" required="" />
+                                            <input name="username" type="text" maxlength="50" value="<?= $user_info ? $user_info['user_username'] : ''; ?>" class="form-control" id="name" placeholder="e.g. victoria" required="" />
                                         </div>
                                     </div>
                                 </div>
-                                <h2 class="card-inside-title" style="font-weight:bold;">Mật khẩu:</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Password:</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input name="password" type="text" maxlength="50" value="<?= $user_info ? $user_info['user_password'] : ''; ?>" class="form-control" id="name" placeholder="Nhap mat khau..." required="" />
+                                            <input name="password" type="text" maxlength="50" value="<?= $user_info ? $user_info['user_password'] : ''; ?>" class="form-control" id="name" placeholder="Enter password ..." required="" />
                                         </div>
                                     </div>
                                 </div>
-                                <h2 class="card-inside-title" style="font-weight:bold;">Họ và tên User:</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Full name:</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input name="name" type="text" maxlength="255" value="<?= $user_info ? $user_info['user_name'] : ''; ?>" class="form-control" id="name" placeholder="họ và tên thật..." required="" />
+                                            <input name="name" type="text" maxlength="255" value="<?= $user_info ? $user_info['user_name'] : ''; ?>" class="form-control" id="name" placeholder="Full name..." required="" />
                                         </div>
                                     </div>
                                 </div>
@@ -65,11 +65,11 @@
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input name="email" type="email" maxlength="255" value="<?= $user_info ? $user_info['user_email'] : ''; ?>" class="form-control" id="color" placeholder="Nhập email của bạn..." required="" />
+                                            <input name="email" type="email" maxlength="255" value="<?= $user_info ? $user_info['user_email'] : ''; ?>" class="form-control" id="color" placeholder="Enter your email..." required="" />
                                         </div>
                                     </div>
                                 </div>
-                                <h2 class="card-inside-title" style="font-weight:bold;">Chọn mức quyền quản trị (Role):</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Select the level of governance (Role):</h2>
                                 <div class="row clearfix">
                                     <div class="col-lg-4 col-md-6">
                                         <div class="mb-3 form-group">
@@ -88,15 +88,15 @@
                                         </div>
                                     </div>
                                 </div> -->
-                                <h2 class="card-inside-title" style="font-weight:bold;">Nhập địa chỉ:</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Enter the address:</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input name="address" type="text" maxlength="200" value="<?= $user_info ? $user_info['user_address'] : ''; ?>" class="form-control" id="material" placeholder="Địa chỉ người dùng ..." required="" />
+                                            <input name="address" type="text" maxlength="200" value="<?= $user_info ? $user_info['user_address'] : ''; ?>" class="form-control" id="material" placeholder="User address ..." required="" />
                                         </div>
                                     </div>
                                 </div>
-                                <h2 class="card-inside-title" style="font-weight:bold;">Nhập số điện thoại:</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Enter the phone number:</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
@@ -104,13 +104,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h2 class="card-inside-title" style="font-weight:bold;">Chọn ngày tạo mới thành viên (bắt buộc):</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Choose a new date of creation (compulsory):</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-4">
                                         <input name="createDate" id="createDate" type="date" value="<?= $user_info ? $user_info['createDate'] : date('d/m/Y'); ?>" class="form-control" placeholder="Please choose date & time...">
                                     </div>
                                 </div>
-                                <h2 class="card-inside-title" style="font-weight:bold;">Chọn ảnh Avatar:</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Select Avatar photo:</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-4">
                                         <input name="imagee" type="file" class="form-control dropify">
@@ -118,8 +118,8 @@
                                 </div>
                                 <br><br>
                                 <div class="form-group" style="text-align: center;">
-                                    <button class="btn btn-primary waves-effect" type="submit">Thêm người dùng mới</button>
-                                    <a class="btn btn-warning waves-effect" href="admin.php?controller=user&action=listall">Trở về</a>
+                                    <button class="btn btn-primary waves-effect" type="submit">Add new users</button>
+                                    <a class="btn btn-warning waves-effect" href="admin.php?controller=user&action=listall">Return</a>
                                 </div>
                             </form>
                         </div>

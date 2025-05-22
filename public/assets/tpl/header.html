@@ -1,0 +1,221 @@
+ <!-- Start: Ultra Modern 2025 Nail Salon Header -->
+    <header id="ultra-modern-header" style="position:relative;overflow:hidden;background:linear-gradient(120deg,#18181a 0%,#232326 100%);box-shadow:0 8px 32px rgba(236,85,152,0.08);border-bottom:4px solid #ec5598;font-family:'Montserrat',Arial,sans-serif;">
+        <!-- Animated Gradient Overlay -->
+        <div id="header-gradient-anim" style="pointer-events:none;position:absolute;inset:0;z-index:0;">
+            <canvas id="header-canvas" style="width:100%;height:100%;display:block;"></canvas>
+        </div>
+        <div class="container" style="position:relative;z-index:1;max-width:1200px;margin:auto;padding:0.5rem 1rem;">
+            <div class="header-top" style="display:flex;justify-content:center;align-items:center;gap:2rem;flex-wrap:wrap;">
+                <a href="mailto:LESLIE@ILOVEYOU.COM" style="color:#ec5598;text-decoration:none;font-weight:600;letter-spacing:1px;display:flex;align-items:center;gap:8px;">
+                    <i class="fas fa-envelope fa-bounce"></i> LESLIE@EMAIL.COM
+                </a>
+                <a href="tel:+1800CALLME" style="color:#ec5598;text-decoration:none;font-weight:600;letter-spacing:1px;display:flex;align-items:center;gap:8px;">
+                    <i class="fas fa-phone fa-shake"></i> +1 800 CALL ME
+                </a>
+            </div>
+            <div class="header-main" style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-top:0.5rem;">
+                <!-- Logo -->
+                <a href="index.html" class="logo" style="display:flex;align-items:center;">
+                    <img src="assets/img/white-logo.png" alt="Nail Salon Logo" style="max-height:56px;">
+                </a>
+                <!-- Desktop Navigation -->
+                <nav class="main-nav" style="flex:1;position:relative;"></nav>
+                    <ul class="nav-list" style="display:flex;align-items:center;justify-content:center;gap:2rem;list-style:none;margin:0;padding:0;">
+                        <li><a href="index.html" style="color:#fff;text-decoration:none;font-weight:500;transition:color 0.2s;">Home</a></li>
+                        <li><a href="services.html" style="color:#fff;text-decoration:none;font-weight:500;transition:color 0.2s;">Services</a></li>
+                        <li><a href="pricing.html" style="color:#fff;text-decoration:none;font-weight:500;transition:color 0.2s;">Pricing</a></li>
+                        <li><a href="about-us.html" style="color:#fff;text-decoration:none;font-weight:500;transition:color 0.2s;">Acerca de</a></li>
+                        <li><a href="gallery.html" style="color:#fff;text-decoration:none;font-weight:500;transition:color 0.2s;">Galería</a></li>
+                        <li><a href="contact-us.html" style="color:#fff;text-decoration:none;font-weight:500;transition:color 0.2s;">Contacto</a></li>
+                        <li><a href="brands.html" style="color:#fff;text-decoration:none;font-weight:500;transition:color 0.2s;">Marcas</a></li>
+                        <li><a href="products.html" style="color:#fff;text-decoration:none;font-weight:500;transition:color 0.2s;">Shop</a></li>
+                          <li><a href="blog.html" style="color:#fff;text-decoration:none;font-weight:500;transition:color 0.2s;">Blog</a></li>
+                    </ul>
+                </nav>
+                <script>
+                    // Prevent click on "Servicios" from navigating if dropdown exists
+                    document.querySelectorAll('.main-nav .dropdown-toggle').forEach(function(el) {
+                        el.addEventListener('click', function(e) {
+                            if(window.innerWidth > 1100) e.preventDefault();
+                        });
+                    });
+                </script>
+                <!-- Reservation Button (Desktop) -->
+                <a href="reserve.html" class="boxed-btn" style="min-width:150px;background:#ec5598;color:#fff;padding:0.7em 1.6em;border-radius:32px;font-weight:700;text-decoration:none;box-shadow:0 2px 8px rgba(236,85,152,0.15);transition:background 0.2s;white-space:nowrap;margin-left:1rem;">Reservar ahora</a>
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Open mobile menu" style="background:none;border:none;color:#ec5598;font-size:2rem;display:none;margin-left:1rem;">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu-area" style="display:none;">
+            <nav>
+                <ul style="list-style:none;margin:0;padding:1.5rem 0;display:flex;flex-direction:column;gap:1.2rem;align-items:center;">
+                    <li style="position:relative;"></li>
+                    <li><a href="services.html" style="color:#fff;text-decoration:none;font-weight:500;">Servicios</a></li>
+                    <li><a href="pricing.html" style="color:#fff;text-decoration:none;font-weight:500;">Precios</a></li>
+                    <li><a href="about-us.html" style="color:#fff;text-decoration:none;font-weight:500;">Acerca de</a></li>
+                    <li><a href="gallery.html" style="color:#fff;text-decoration:none;font-weight:500;">Galería</a></li>
+                    <li><a href="contact-us.html" style="color:#fff;text-decoration:none;font-weight:500;">Contacto</a></li>
+                    <li><a href="brands.html" style="color:#fff;text-decoration:none;font-weight:500;">Brands</a></li>
+                    <li><a href="blog.html" style="color:#fff;text-decoration:none;font-weight:500;">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Responsive & Animation Scripts -->
+    <style>
+        /* Dropdown hover styles */
+        @media (max-width: 1440){
+            .main-nav .dropdown:hover > .dropdown-menu,
+            .main-nav .dropdown:focus-within > .dropdown-menu {
+                display: flex !important;
+            }
+            .main-nav .dropdown-menu {
+                transition: opacity 0.18s;
+                opacity: 0;
+                pointer-events: none;
+            }
+            .main-nav .dropdown:hover > .dropdown-menu,
+            .main-nav .dropdown:focus-within > .dropdown-menu {
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .main-nav .dropdown-menu li a:hover {
+                background: #ec5598;
+                color: #fff;
+            }
+            .mobile-menu-area {
+                display:none;
+                position:absolute;
+                top:100%;
+                left:0;
+                width:100%;
+                background:#18181a;
+                z-index:10;
+                box-shadow: 0 8px 32px rgba(236,85,152,0.08);
+                border-bottom-left-radius: 18px;
+                border-bottom-right-radius: 18px;
+                animation: slideDown 0.3s cubic-bezier(.4,2,.6,1) both;
+            }
+        }
+        @media (max-width: 991px) {
+            .main-nav { display: none !important; }
+            .main-nav .dropdown-menu {
+                display: none !important;
+            }
+            .boxed-btn { display: none !important; }
+            .mobile-menu-toggle { display: inline-block !important; }
+            .header-main { flex-wrap: wrap; }
+            .header-main .nav-list { gap: 1rem !important; }
+            .mobile-menu-area {
+                display: none ;
+            }
+        }
+        @media (max-width: 768px) {
+            .mobile-menu-area.active {
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+            }
+            .mobile-menu-area nav ul {
+                width: 100%;
+                padding: 1.5rem 0;
+                display: flex;
+                flex-direction: column;
+                gap: 1.2rem;
+                align-items: center;
+            }
+            .mobile-menu-area nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+            .mobile-menu-area nav ul li a {
+                display: block;
+                width: 100%;
+                padding: 0.8em 0;
+                color: #fff;
+                font-weight: 600;
+                border-radius: 8px;
+                transition: background 0.18s, color 0.18s;
+            }
+            .mobile-menu-area nav ul li a:hover {
+                background: #ec5598;
+                color: #fff;
+            }
+            .mobile-menu-area nav ul {
+                gap: 0.7rem;
+            }
+            .mobile-menu-area nav ul li a {
+                font-size: 1.1em;
+                padding: 1em 0;
+            }   
+            .header-top {
+                display: none !important;
+            }
+            .header-main {
+                gap: 0.5rem;
+                align-items: stretch;
+                text-align: center;
+            }
+            .header-main .nav-list{
+                display: none !important;
+            }
+            .logo img { max-height: 40px; margin: 0 auto; }
+            @keyframes slideDown {
+                from { opacity: 0; transform: translateY(-16px);}
+                to { opacity: 1; transform: translateY(0);}
+            }
+        }
+    </style>
+    <script>
+        // Animated gradient
+        const canvas = document.getElementById('header-canvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            function resize() {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+            let t = 0;
+            function draw() {
+                const w = canvas.width, h = canvas.height;
+                ctx.clearRect(0,0,w,h);
+                const grad = ctx.createLinearGradient(0, 0, w, h);
+                grad.addColorStop(0, `rgba(236,85,152,${0.18 + 0.1*Math.sin(t)})`);
+                grad.addColorStop(0.5, `rgba(24,24,26,${0.12 + 0.1*Math.cos(t/2)})`);
+                grad.addColorStop(1, `rgba(35,35,38,1)`);
+                ctx.fillStyle = grad;
+                ctx.fillRect(0,0,w,h);
+                t += 0.01;
+                requestAnimationFrame(draw);
+            }
+            draw();
+        }
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu-area');
+
+        mobileToggle && mobileToggle.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('active')) {
+                console.log("open removed");
+                mobileMenu.classList.remove('active');
+                mobileMenu.style.display = 'none';
+            } else {
+                console.log("open added");
+                mobileMenu.classList.add('active');
+                mobileMenu.style.display = 'flex';
+            }
+        });
+        // Hide mobile menu on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                mobileMenu.classList.remove('active');
+                mobileMenu.style.display = 'none';
+            }
+        });
+    </script>
+    <!-- End: Ultra Modern 2025 Nail Salon Header -->

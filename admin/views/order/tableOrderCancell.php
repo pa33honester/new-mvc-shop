@@ -5,23 +5,23 @@ $options = [
 ];
 $order_noprocess = getAll('orders', $options);
 $status = [
-    0 => 'Chưa xử lý',
-    1 => 'Đã xử lý',
-    2 => 'Đang xử lý',
-    3 => 'Đã bị hủy',
+    0 => 'Unprocessed',
+    1 => 'Handled',
+    2 => 'Handling',
+    3 => 'Having been canceled',
 ]; ?>
 <!-- Basic Examples -->
 <div class="row clearfix">
     <div class="col-lg-12">
         <div class="card">
             <div class="header">
-                <h2><strong>Truy Xuất Dữ Liệu</strong> "Đơn hàng đã bị hủy" </h2>
+                <h2><strong>Data access</strong> "Orders were canceled" </h2>
                 <ul class="header-dropdown">
                     <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                         <ul class="dropdown-menu dropdown-menu-right slideUp">
-                            <li><a href="admin.php?controller=order&action=order-noprocess">Chưa xử lý</a></li>
-                            <li><a href="admin.php?controller=order&action=order-complete">Đơn hoàn thành</a></li>
-                            <li><a href="admin.php?controller=order&action=order-inprocess">Đang vận chuyển</a></li>
+                            <li><a href="admin.php?controller=order&action=order-noprocess">Unprocessed</a></li>
+                            <li><a href="admin.php?controller=order&action=order-complete">Completed application</a></li>
+                            <li><a href="admin.php?controller=order&action=order-inprocess">Shipping</a></li>
                         </ul>
                     </li>
                     <li class="remove">
@@ -35,23 +35,23 @@ $status = [
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Tên khách hàng</th>
+                                <th>Customer name</th>
                                 <th>UserName | ID (User)</th>
-                                <th>Ngày đặt đơn</th>
-                                <th>Tổng giá trị đơn hàng</th>
-                                <th>Tình trạng</th>
-                                <th>Hành Động</th>
+                                <th>Application date</th>
+                                <th>Total order value</th>
+                                <th>Status</th>
+                                <th>Act</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
                                 <th>ID</th>
-                                <th>Tên khách hàng</th>
+                                <th>Customer name</th>
                                 <th>UserName | ID (User)</th>
-                                <th>Ngày đặt đơn</th>
-                                <th>Tổng giá trị đơn hàng</th>
-                                <th>Tình trạng</th>
-                                <th>Hành Động</th>
+                                <th>Application date</th>
+                                <th>Total order value</th>
+                                <th>Status</th>
+                                <th>Act</th>
                             </tr>
                         </tfoot>
                         <tbody>

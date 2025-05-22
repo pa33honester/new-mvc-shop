@@ -5,9 +5,9 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2><?php ?></h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> Nails By Leslie </a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=shop">Nhóm danh mục</a></li>
-                        <li class="breadcrumb-item active"><?= $category ? 'Cập nhật nhóm danh mục: '. $category['category_name'] : 'Thêm nhóm danh mục mới'; ?></li>
+                        <li class="breadcrumb-item active"><?= $category ? 'Update the category group: '. $category['category_name'] : 'Add a new category group'; ?></li>
                     </ul>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
@@ -21,7 +21,7 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="alert alert-warning" role="alert">
-                        <strong><?= $category ? 'Cảnh Báo: </strong> Bạn đang trong trang chỉnh sửa của nhóm danh mục "'.$category['category_name'].'", Hãy cẩn trọng!!! <a target="_blank" href="#"> Xem tài liệu hướng dẫn</a>' : 'Cảnh Báo: </strong> Bạn đang trong trang tạo một nhóm danh mục mới, Hãy cẩn trọng!!! <a target="_blank" href="#"> Xem tài liệu hướng dẫn</a>'; ?>
+                        <strong><?= $category ? 'Warning: </strong> You are in the editing of the category group "'.$category['category_name'].'", Be careful!!! <a target="_blank" href="#"> View guide documents</a>' : 'Warning: </strong> You are on the page to create a new category group, be careful !!! <a target="_blank" href="#"> View guide documents</a>'; ?>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                             </button>
@@ -30,35 +30,35 @@
                         <div class="body">
                             <form id="product-form" class="form-horizontal" method="post" enctype="multipart/form-data" role="form">
                                 <input name="cate_id" type="hidden" value="<?= $category ? $category['id'] : '0'; ?>" />
-                                <h2 class="card-inside-title" style="font-weight:bold;">Tên nhóm danh mục:</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Name of the category group:</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input name="name" type="text"  maxlength="255" value="<?= $category ? $category['category_name'] : ''; ?>" class="form-control" id="name" placeholder="Nhập tên sản nhóm danh mục..." required="" />
+                                            <input name="name" type="text"  maxlength="255" value="<?= $category ? $category['category_name'] : ''; ?>" class="form-control" id="name" placeholder="Enter the name of the category group..." required="" />
                                         </div>
                                     </div>
                                 </div>
-                                <h2 class="card-inside-title" style="font-weight:bold;">Slug (Đường dẫn của nhóm danh mục):</h2>
-                                <p>Đường dẫn link sẽ tự động được tạo giống với tên danh mục...</p>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Slug (the link of the category group):</h2>
+                                <p>The link line will automatically be created similar to the category name ...</p>
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input name="slug" type="text"  maxlength="255" value="<?= $category ? $category['slug'] : ''; ?>" class="form-control" id="slug" placeholder="Đường dẫn link sẽ tự động được tạo giống với tên danh mục..." required="" disabled/>
+                                            <input name="slug" type="text"  maxlength="255" value="<?= $category ? $category['slug'] : ''; ?>" class="form-control" id="slug" placeholder="The link line will automatically be created similar to the category name ..." required="" disabled/>
                                         </div>
                                     </div>
                                 </div>
-                                <h2 class="card-inside-title" style="font-weight:bold;">Thứ tự vị trí:</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Location order:</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input name="position" type="text"  maxlength="4" value="<?= $category ? $category['category_position'] : ''; ?>" class="form-control" id="slug" placeholder="Vị trí danh mục trên bảng dữ liệu..." pattern="[0-9]+" required="" />
+                                            <input name="position" type="text"  maxlength="4" value="<?= $category ? $category['category_position'] : ''; ?>" class="form-control" id="slug" placeholder="Location of the list on the data board ..." pattern="[0-9]+" required="" />
                                         </div>
                                     </div>
                                 </div>
                                 <br><br>
                                 <div class="form-group" style="text-align: center;">
-                                    <button class="btn btn-primary waves-effect" type="submit"><?= $category ? 'Cập nhật nhóm danh mục trên' : 'Thêm nhóm danh mục mới'; ?></button>
-                                    <a class="btn btn-warning waves-effect" href="admin.php?controller=shop">Trở về</a>
+                                    <button class="btn btn-primary waves-effect" type="submit"><?= $category ? 'Update the category group above' : 'Add a new category group'; ?></button>
+                                    <a class="btn btn-warning waves-effect" href="admin.php?controller=shop">Return</a>
                                 </div>
                             </form>
                         </div>

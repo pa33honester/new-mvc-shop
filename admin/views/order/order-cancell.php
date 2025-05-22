@@ -10,11 +10,11 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Đơn hàng đã Hủy</h2>
+                    <h2>Orders canceled</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?=PATH_URL.'home'?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
-                        <li class="breadcrumb-item"><a href="admin.php?controller=order">Đơn hàng</a></li>
-                        <li class="breadcrumb-item active">Đơn hàng đã bị hủy</li>
+                        <li class="breadcrumb-item"><a href="<?=PATH_URL.'home'?>"><i class="zmdi zmdi-home"></i> Nails By Leslie </a></li>
+                        <li class="breadcrumb-item"><a href="admin.php?controller=order">Order</a></li>
+                        <li class="breadcrumb-item active">The order was canceled</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>

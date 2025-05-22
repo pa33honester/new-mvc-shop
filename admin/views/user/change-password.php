@@ -27,7 +27,7 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="alert alert-warning" role="alert">
-                        <strong>Bạn đang thực hiện đổi mật khẩu, Hãy cẩn trọng!!! <a target="_blank" href="#"> Xem tài liệu hướng dẫn</a>
+                        <strong> You are changing the password, be careful !!! <a target="_blank" href="#"> View guide documents</a>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                             </button>
@@ -38,27 +38,27 @@
                                 <input name="id_change" type="hidden" value="<?= $user_info ? $user_info['id'] : '0'; ?>" />
                                 <div class="row clearfix">
                                     <div class="col-sm-6">
-                                        <h2 class="card-inside-title" style="font-weight:bold;">Mật khẩu hiện tại:</h2>
+                                        <h2 class="card-inside-title" style="font-weight:bold;">Current password:</h2>
                                         <div class="row clearfix">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <input name="currentPassword" type="password" maxlength="50" value="" class="form-control" placeholder="VD: tanhongit" required="" />
+                                                    <input name="currentPassword" type="password" maxlength="50" value="" class="form-control" placeholder="" required="" />
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class="card-inside-title" style="font-weight:bold;">Mật khẩu mới:</h2>
+                                        <h2 class="card-inside-title" style="font-weight:bold;">New password:</h2>
                                         <div class="row clearfix">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <input name="newPassword" type="password" value="" maxlength="50" class="form-control" placeholder="Nhap mat khau..." required="" />
+                                                    <input name="newPassword" type="password" value="" maxlength="50" class="form-control" placeholder="" required="" />
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class="card-inside-title" style="font-weight:bold;">Xác nhận mật khẩu mới:</h2>
+                                        <h2 class="card-inside-title" style="font-weight:bold;">Confirm password:</h2>
                                         <div class="row clearfix">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <input name="confirmPassword" type="password" value="" maxlength="50" class="form-control" placeholder="Xác nhận mật khẩu..." required="" />
+                                                    <input name="confirmPassword" type="password" value="" maxlength="50" class="form-control" placeholder="" required="" />
                                                 </div>
                                             </div>
                                         </div>
@@ -66,8 +66,8 @@
                                 </div>
                                 <br><br>
                                 <div class="form-group" style="text-align: center;">
-                                    <button class="btn btn-primary waves-effect" type="submit">Xác nhận đổi mật khẩu mới</button>
-                                    <a class="btn btn-warning waves-effect" href="admin.php?controller=user&action=info&amp;user_id=<?= $user_info['id']; ?>">Trở về</a>
+                                    <button class="btn btn-primary waves-effect" type="submit">Apply</button>
+                                    <a class="btn btn-warning waves-effect" href="admin.php?controller=user&action=info&amp;user_id=<?= $user_info['id']; ?>">Return</a>
                                 </div>
                             </form>
                         </div>

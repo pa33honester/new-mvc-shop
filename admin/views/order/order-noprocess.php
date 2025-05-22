@@ -10,11 +10,11 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Đơn hàng chưa xử lý</h2>
+                    <h2>Orders have not processed</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?=PATH_URL.'home'?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
-                        <li class="breadcrumb-item"><a href="admin.php?controller=order">Đơn hàng</a></li>
-                        <li class="breadcrumb-item active">Đơn hàng chưa xử lý</li>
+                        <li class="breadcrumb-item"><a href="<?=PATH_URL.'home'?>"><i class="zmdi zmdi-home"></i> Nails By Leslie </a></li>
+                        <li class="breadcrumb-item"><a href="admin.php?controller=order">Orders</a></li>
+                        <li class="breadcrumb-item active">Orders have not processed</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>

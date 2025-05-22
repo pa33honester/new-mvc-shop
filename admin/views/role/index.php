@@ -10,11 +10,11 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Quyền truy cập</h2>
+                    <h2>Access</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> Nails By Leslie </a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=role">Roles</a></li>
-                        <li class="breadcrumb-item active">Danh sách phân quyền quản trị</li>
+                        <li class="breadcrumb-item active">List of governance decentralization</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
@@ -29,7 +29,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2><strong>Truy Xuất Dữ Liệu</strong> "Roles" </h2>
+                            <h2><strong>Data access</strong> Roles </h2>
                             <ul class="header-dropdown">
                                 <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                     <ul class="dropdown-menu dropdown-menu-right slideUp">
@@ -49,17 +49,17 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Tên Role</th>
-                                            <th>Mô tả</th>
-                                            <th>Hành Động</th>
+                                            <th>Role Name</th>
+                                            <th>Description</th>
+                                            <th>Act</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
-                                        <tr>
+                                       <tr>
                                             <th>ID</th>
-                                            <th>Tên Role</th>
-                                            <th>Mô tả</th>
-                                            <th>Hành Động</th>
+                                            <th>Role Name</th>
+                                            <th>Description</th>
+                                            <th>Act</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>

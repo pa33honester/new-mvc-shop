@@ -10,9 +10,9 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Trả lời quan email về phản hồi</h2>
+                    <h2>Answer email about feedback</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> Home </a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=feedback">Feedback</a></li>
                         <li class="breadcrumb-item active">Reply Feedback</li>
                     </ul>
@@ -26,29 +26,29 @@
         <div class="container-fluid">
             <!-- Basic Examples -->
             <div class="row clearfix">
-                <h2 style="font-weight: bold;">Gửi Email trả lời phản hồi</h2>
+                <h2 style="font-weight: bold;">Send an email response</h2>
                 <div class="col-lg-12">
                     <div class="row clearfix">
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <h5>Tên người gửi phản hồi</h5>
+                                <h5>The sender's name responds</h5>
                                 <input name="name" type="text" disabled value="<?= $feedback ? $feedback['name'] : ''; ?>" class="form-control" id="name" placeholder="họ và tên thật..." required="" />
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <h5>Email của người gửi phản hồi</h5>
+                                <h5>Email sender responds</h5>
                                 <input name="email" type="text" disabled value="<?= $feedback ? $feedback['email'] : ''; ?>" class="form-control" id="color" placeholder="Nhập email của bạn..." required="" />
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <h5>SĐT của người gửi phản hồi</h5>
+                                <h5>The phone number of the sender responded</h5>
                                 <input name="phone" type="text" disabled value="<?= $feedback ? $feedback['phone'] : ''; ?>" class="form-control" id="totalview" required placeholder="0123456789..." />
                             </div>
                         </div>
                     </div>
-                    <h4 class="card-inside-title" style="font-weight:bold;">Nội dung của người đã phản hồi:</h4>
+                    <h4 class="card-inside-title" style="font-weight:bold;">The content of the person has responded:</h4>
                     <div class="row clearfix">
                         <div class="col-sm-12">
                             <div class="form-group">

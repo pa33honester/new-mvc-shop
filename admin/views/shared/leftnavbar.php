@@ -1,7 +1,7 @@
 <aside id="leftsidebar" class="sidebar">
     <div class="navbar-brand">
         <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-        <a href="index.php"><img src="admin/themes/images/logo.svg" width="25" alt="Aero"><span class="m-l-10">ChiKoi</span></a>
+        <a href="index.php"><img src="admin/themes/images/logo.svg" width="25" alt="Aero"><span class="m-l-10">Nails By Leslie</span></a>
     </div>
     <div class="menu">
         <ul class="list">
@@ -20,103 +20,78 @@
                     </div>
                 </div>
             </li>
-            <li class="open"><a href="<?= PATH_URL ?>home" target="_blank"><i class="zmdi zmdi-home"></i><span>Quay lại SHOP</span></a></li>
-            <li <?= $homeNav ?? '' ?>><a href="admin.php"><i class="zmdi zmdi-view-dashboard"></i><span>Bảng điều khiển</span></a></li>
+            <li class="open"><a href="<?= PATH_URL ?>home" target="_blank"><i class="zmdi zmdi-home"></i><span>Back Home</span></a></li>
+            <li <?= $homeNav ?? ''?>> <a href="admin.php"><i class="zmdi zmdi-view-dashboard"></i><span>Dashboard</span></a></li>
             <li <?php if (isset($nav_profile)) {
                 echo $nav_profile;
             } ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account"></i><span>Profile</span></a>
                 <ul class="ml-menu">
-                    <li><a href="admin.php?controller=user&action=info&user_id=<?= $userNav ?>">Your profile</a></li>
-                    <li><a href="admin.php?controller=user&action=change-password&user_id=<?= $userInfoNav['id'] ?>">Change your Password</a></li>
+                    <li><a href="admin.php?controller=user&action=info&user_id=<?= $userNav ?>">View profile</a></li>
+                    <li><a href="admin.php?controller=user&action=change-password&user_id=<?= $userInfoNav['id'] ?>">Change Password</a></li>
                 </ul>
             </li>
-            <li <?= $yourFeedback ?? '' ?>><a href="admin.php?controller=feedback&action=myfeedback"><i class="zmdi zmdi-mail-send"></i><span>Your Feedback</span></a></li>
-            <li <?= $yourPurchaseNav ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Your Purchase</span></a>
+            <li <?= $yourFeedback ?? '' ?>><a href="admin.php?controller=feedback&action=myfeedback"><i class="zmdi zmdi-mail-send"></i><span>Feedback</span></a></li>
+            <li <?= $yourPurchaseNav ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Purchase</span></a>
                 <ul class="ml-menu">
-                    <li><a href="admin.php?controller=purchase">Tất cả</a></li>
-                    <li><a href="admin.php?controller=purchase&action=confirmed">Đơn đã xác thực</a></li>
-                    <li><a href="admin.php?controller=purchase&action=delivery">Đơn đang vận chuyển</a></li>
-                    <li><a href="admin.php?controller=purchase&action=receied">Đơn hàng đã nhận</a></li>
-                    <li><a href="admin.php?controller=purchase&action=cancelled">Đơn hàng đã hủy</a></li>
+                    <li><a href="admin.php?controller=purchase">All</a></li>
+                    <li><a href="admin.php?controller=purchase&action=confirmed">The application was authenticated</a></li>
+                    <li><a href="admin.php?controller=purchase&action=delivery">The application is being transported</a></li>
+                    <li><a href="admin.php?controller=purchase&action=receied"> Order received</a></li>
+                    <li><a href="admin.php?controller=purchase&action=cancelled">Orders canceled</a></li>
                 </ul>
             </li>
+            <!-- Admin or Moderator !-->
             <?php if ($userInfoNav['role_id'] != 0) :
                 if ($userInfoNav['role_id'] == 1) : ?>
-                    <li <?= $navCategory ?? ''; ?>> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-folder"></i><span>Quản lý danh mục</span></a>
+                    <li <?= $productNav ?? '' ?>> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-collection-text"></i><span>Products</span></a>
                         <ul class="ml-menu">
-                            <li><a href="admin.php?controller=shop">1. Nhóm danh mục</a></li>
-                            <li><a href="admin.php?controller=shop&amp;action=edit">2. Add nhóm danh mục mới</a></li>
-                            <li><a href="admin.php?controller=category">3. Danh mục con</a></li>
-                            <li><a href="admin.php?controller=category&amp;action=edit">4. Add danh mục con mới</a></li>
+                            <li><a href="admin.php?controller=product">Product list</a></li>
+                            <li><a href="admin.php?controller=product&action=update">New updated products</a></li>
+                            <li><a href="admin.php?controller=product&action=newproduct">New products</a></li>
+                            <li><a href="admin.php?controller=product&action=saleproduct">Promotional products</a></li>
+                            <li><a href="admin.php?controller=product&action=hotproduct">Hot products</a></li>
+                            <li><a href="admin.php?controller=product&amp;action=edit">Add a new product</a></li>
                         </ul>
                     </li>
-                    <li <?= $backupDbClass ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-dns"></i><span>Backup</span></a>
+                    <li <?= $navCategory ?? ''; ?>> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-folder"></i><span>Category & Brand</span></a>
                         <ul class="ml-menu">
-                            <li><a href="admin.php?controller=backupdb">Backup CSDL</a></li>
-                            <li><a href="admin.php?controller=backupdb&action=list">List Backup CSDL</a></li>
+                            <li><a href="admin.php?controller=shop">1. List of categories</a></li>
+                            <li><a href="admin.php?controller=shop&amp;action=edit">2.Add a new category group</a></li>
+                            <li><a href="admin.php?controller=category">3. Brands of sub-catalogs</a></li>
+                            <li><a href="admin.php?controller=category&amp;action=edit">4. Add a new Brand</a></li>
+
                         </ul>
                     </li>
-                    <li <?= $navHF ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-view-web"></i><span>Setup View Web</span></a>
+                   
+                    <li <?= $adminNav ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account"></i><span>User</span></a>
                         <ul class="ml-menu">
-                            <li><a href="admin.php?controller=slide">Slide HomePage</a></li>
-                            <li><a href="admin.php?controller=header-footer">Edit Header Footer</a></li>
-                            <li><a href="admin.php?controller=header-footer&action=listMenuFooter">Link Menu Footer</a></li>
-                        </ul>
-                    </li>
-                    <li <?= $adminNav ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account"></i><span>Admin</span></a>
-                        <ul class="ml-menu">
-                            <li><a href="admin.php?controller=user&action=info&user_id=<?= $userNav ?>">Your Profile</a></li>
-                            <li><a href="admin.php?controller=role">List Role</a></li>
-                            <li><a href="admin.php?controller=role&action=admin">List Admin</a></li>
-                            <li><a href="admin.php?controller=user&action=add">Add New User Or Admin</a></li>
+                            <li><a href="admin.php?controller=user&action=listall">List of Users</a></li>
+                            <li><a href="admin.php?controller=role">List of Roles</a></li>
+                            <li><a href="admin.php?controller=role&action=admin">List of Admins</a></li>
+                            <li><a href="admin.php?controller=user&action=add">Add New User(Admin)</a></li>
                         </ul>
                     </li>
                 <?php endif; ?>
-                <li <?= $pageNav ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-blogger"></i><span>Blog -> Page</span></a>
+                
+                <li <?= $orderNav ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Reservations</span></a>
                     <ul class="ml-menu">
-                        <li><a href="admin.php?controller=page">All Page</a></li>
-                        <li><a href="admin.php?controller=page&action=viewtrash">Thùng rác</a></li>
-                        <li><a href="admin.php?controller=page&action=viewdraft">Các bản nháp</a></li>
-                        <li><a href="admin.php?controller=page&action=add">ADD New Page</a></li>
+                        <li><a href="admin.php?controller=order">View All</a></li>
+                        <li><a href="admin.php?controller=order&amp;action=order-noprocess">Waiting</a></li>
+                        <li><a href="admin.php?controller=order&amp;action=order-inprocess">Progress</a></li>
+                        <li><a href="admin.php?controller=order&amp;action=order-complete">Finished</a></li>
+                        <li><a href="admin.php?controller=order&amp;action=order-cancell">Canceled</a></li>
                     </ul>
                 </li>
-                <li <?= $postNav ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-blogger"></i><span>Blog -> Post</span></a>
-                    <ul class="ml-menu">
-                        <li><a href="admin.php?controller=post">All Post</a></li>
-                        <li><a href="admin.php?controller=post&action=viewtrash">Thùng rác</a></li>
-                        <li><a href="admin.php?controller=post&action=viewdraft">Các bản nháp</a></li>
-                        <li><a href="admin.php?controller=post&action=add">ADD New Post</a></li>
-                    </ul>
-                </li>
-                <li <?= $productNav ?? '' ?>> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-collection-text"></i><span>Quản lý sản phẩm</span></a>
-                    <ul class="ml-menu">
-                        <li><a href="admin.php?controller=product">Danh sách sản phẩm</a></li>
-                        <li><a href="admin.php?controller=product&action=update">Sản phẩm mới cập nhật</a></li>
-                        <li><a href="admin.php?controller=product&action=newproduct">Sản phẩm mới</a></li>
-                        <li><a href="admin.php?controller=product&action=saleproduct">Sản phẩm khuyến mại</a></li>
-                        <li><a href="admin.php?controller=product&action=hotproduct">Sản phẩm hot</a></li>
-                        <li><a href="admin.php?controller=product&amp;action=edit">Add sản phẩm mới</a></li>
-                    </ul>
-                </li>
-                <li <?= $orderNav ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Quản lý đơn hàng</span></a>
-                    <ul class="ml-menu">
-                        <li><a href="admin.php?controller=order">Danh sách All đơn hàng</a></li>
-                        <li><a href="admin.php?controller=order&amp;action=order-noprocess">Đơn hàng chưa xử lý</a></li>
-                        <li><a href="admin.php?controller=order&amp;action=order-inprocess">Đơn hàng đang xử lý</a></li>
-                        <li><a href="admin.php?controller=order&amp;action=order-complete">Đơn hàng đã xử lý</a></li>
-                        <li><a href="admin.php?controller=order&amp;action=order-cancell">Đơn hàng đã bị hủy</a></li>
-                    </ul>
-                </li>
-                <li <?php if (isset($nav_user)) {
+                <!-- <li <?php if (isset($nav_user)) {
                     echo $nav_user;
                 } ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account"></i><span>User</span></a>
                     <ul class="ml-menu">
                         <li><a href="admin.php?controller=user&action=info&user_id=<?= $userNav ?>">Your Profile</a></li>
-                        <li><a href="admin.php?controller=user&action=listall">List Profile</a></li>
+                        <li><a href="admin.php?controller=user&action=listall">List of Users</a></li>
                         <li><a href="admin.php?controller=user&action=add">Add New User</a></li>
                     </ul>
-                </li>
-                <li <?php if (isset($navMedia)) {
+                </li> -->
+                <!-- <li <?php if (isset($navMedia)) {
                     echo $navMedia;
                 } ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-collection-folder-image"></i><span>Media</span></a>
                     <ul class="ml-menu">
@@ -124,8 +99,8 @@
                         <li><a href="admin.php?controller=media">Library Media Upload</a></li>
                         <li><a href="admin.php?controller=media&action=add">Add New Media</a></li>
                     </ul>
-                </li>
-                <li <?= $navFeedback ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-email-open"></i><span>Feedback Manager</span></a>
+                </li> !-->
+                <li <?= $navFeedback ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-email-open"></i><span>Feedback</span></a>
                     <ul class="ml-menu">
                         <li><a href="admin.php?controller=feedback">All Feedback</a></li>
                         <li><a href="admin.php?controller=feedback&action=pending">Pending Feedback</a></li>
@@ -134,7 +109,7 @@
                         <li><a href="admin.php?controller=feedback&action=other">Other Feedback</a></li>
                     </ul>
                 </li>
-                <li <?= $navComment ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-comments"></i><span>Comment Manager</span></a>
+                <!-- <li <?= $navComment ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-comments"></i><span>Comment</span></a>
                     <ul class="ml-menu">
                         <li><a href="admin.php?controller=comment">All comment</a></li>
                         <li><a href="admin.php?controller=comment&action=pending">Pending comment</a></li>
@@ -142,6 +117,35 @@
                         <li><a href="admin.php?controller=comment&action=trash">Trash comment</a></li>
                     </ul>
                 </li>
+                <li <?= $pageNav ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-blogger"></i><span>Blog -> Page</span></a>
+                    <ul class="ml-menu">
+                        <li><a href="admin.php?controller=page">All Page</a></li>
+                        <li><a href="admin.php?controller=page&action=viewtrash">Trash</a></li>
+                        <li><a href="admin.php?controller=page&action=viewdraft">Drafts</a></li>
+                        <li><a href="admin.php?controller=page&action=add">ADD New</a></li>
+                    </ul>
+                </li>
+                <li <?= $postNav ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-blogger"></i><span>Blog -> Post</span></a>
+                    <ul class="ml-menu">
+                        <li><a href="admin.php?controller=post">All Post</a></li>
+                        <li><a href="admin.php?controller=post&action=viewtrash">Trash</a></li>
+                        <li><a href="admin.php?controller=post&action=viewdraft">Drafts</a></li>
+                        <li><a href="admin.php?controller=post&action=add">ADD New</a></li>
+                    </ul>
+                </li>
+                 <li <?= $navHF ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-view-web"></i><span>Setup View Web</span></a>
+                    <ul class="ml-menu">
+                        <li><a href="admin.php?controller=slide">Slide HomePage</a></li>
+                        <li><a href="admin.php?controller=header-footer">Edit Header Footer</a></li>
+                        <li><a href="admin.php?controller=header-footer&action=listMenuFooter">Link Menu Footer</a></li>
+                    </ul>
+                </li> 
+                <li <?= $backupDbClass ?? '' ?>><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-dns"></i><span>Backup</span></a>
+                    <ul class="ml-menu">
+                        <li><a href="admin.php?controller=backupdb">Backup CSDL</a></li>
+                        <li><a href="admin.php?controller=backupdb&action=list">List Backup CSDL</a></li>
+                    </ul>
+                </li> -->
             <?php endif; ?>
         </ul>
     </div>

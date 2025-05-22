@@ -10,12 +10,12 @@ $feedbacks = getAll('feedbacks', $options);
     <div class="col-lg-12">
         <div class="card">
             <div class="header">
-                <h2>Truy Xuất Dữ Liệu <strong>"Phản hồi sản phẩm"</strong> </h2>
+                <h2>Data access <strong>"Product feedback"</strong> </h2>
                 <ul class="header-dropdown">
                     <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                         <ul class="dropdown-menu dropdown-menu-right slideUp">
-                            <li><a href="admin.php?controller=feedback&action=order">Phản hồi về đơn hàng</a></li>
-                            <li><a href="admin.php?controller=feedback&action=other">Phản hồi khác</a></li>
+                            <li><a href="admin.php?controller=feedback&action=order">Feedback on order</a></li>
+                            <li><a href="admin.php?controller=feedback&action=other">Other feedback</a></li>
                         </ul>
                     </li>
                     <li class="remove">
@@ -31,19 +31,19 @@ $feedbacks = getAll('feedbacks', $options);
                                 <th>Name | (ID User)</th>
                                 <th>Time</th>
                                 <th>Email</th>
-                                <th>SĐT</th>
-                                <th>Nội dung</th>
-                                <th>Hành Động</th>
+                                <th>Phone</th>
+                                <th>Content</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Name | (ID User)</th>
+                                 <th>Name | (ID User)</th>
                                 <th>Time</th>
                                 <th>Email</th>
-                                <th>SĐT</th>
-                                <th>Nội dung</th>
-                                <th>Hành Động</th>
+                                <th>Phone</th>
+                                <th>Content</th>
+                                <th>Action</th>
                             </tr>
                         </tfoot>
                         <tbody>
